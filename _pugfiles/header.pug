@@ -1,0 +1,21 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About Me
+    li: a(href="#android") Android
+    li: a(href="#web-development") Full Stack
+    li: a(href="#wordpress") Wordpress
+    li: a(href="#contact") Contact
+
+.mobile-nav
+  +nav-content()
+
+header
+  .header-position
+    h1.logo Michael Scoboria
+
+    nav.site-nav
+      +nav-content()
+
+    a(href="mailto:scoboria@gmail.com").email-link +email me
+
+    .mobile-nav-toggle: span
