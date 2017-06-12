@@ -473,10 +473,40 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: 'Fira Sans' sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+.home-cta {
+  font-size: 28px;
+  display: block;
+  background: white;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0.4em 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .home-cta:hover {
+    -webkit-box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.6); }
+
+.flex-video {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56%;
+  position: relative; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0; }
 
 .home-wrap header {
   width: 135px;
@@ -674,22 +704,186 @@ section {
   background: yellow;
   width: 50%; }
 
+.push-right {
+  margin-left: 350px; }
+
 @media (max-width: 640px) {
   .flex {
     display: block; }
     .flex .col-1 {
       max-width: 100%; }
-  .col-50 {
-    width: auto; } }
+    .flex .col-50 {
+      width: auto; }
+  .push-right {
+    margin-left: 10px; } }
 
 section.about {
   background-image: url(../img/about-cat.png);
-  background-position: center center;
+  background-position: left center;
   -webkit-background-size: cover;
           background-size: cover; }
   section.about h2 {
-    color: #3f3f42;
-    font-size: 60px; }
+    color: #f4f4f4;
+    margin-left: -108px;
+    margin-top: 0;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1; }
+  section.about .home-lead {
+    padding-bottom: 180px; }
+
+.home-lead {
+  color: #f4f4f4;
+  font-size: 36px;
+  line-height: 1.1; }
+  .home-lead.outdented {
+    text-indent: -.75em; }
+    @media (max-width: 640px) {
+      .home-lead.outdented {
+        text-indent: 0; } }
+
+@media (max-width: 640px) {
+  section.about h2, section.about .home-lead {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px; } }
+
+section.youtube {
+  background-image: url(../img/youtube-bg.gif);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: right top;
+  color: black; }
+  section.youtube .flex-video {
+    -webkit-box-shadow: 0 4px 40px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 40px 3px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4); }
+    @media (max-width: 1080px) {
+      section.youtube .flex-video {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1); } }
+  section.youtube .home-cta {
+    color: #e20a0a; }
+  section.youtube .video-strip {
+    position: absolute;
+    margin: -50px 0;
+    top: 0;
+    width: 100%;
+    height: -webkit-calc(100% + 100px);
+    height: calc(100% + 100px);
+    background-image: url(../img/video-strip.png);
+    background-position: center 0px;
+    background-repeat: repeat-y;
+    -webkit-background-size: 70% 70%;
+            background-size: 70%; }
+    @media (max-width: 640px) {
+      section.youtube .video-strip {
+        display: none; } }
+  section.youtube .col-1 {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 640px) {
+      section.youtube .col-1 {
+        -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 0 30px 0; } }
+  @media (max-width: 840px) {
+    section.youtube .home-lead {
+      font-size: 24px; }
+    section.youtube .home-cta {
+      font-size: 20px; }
+    section.youtube .tweak {
+      width: 200px; } }
+
+section.mentoring {
+  background-image: url(../img/mentoring-bg.jpg);
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden; }
+  section.mentoring .col-1 {
+    width: 320px; }
+  section.mentoring .home-cta {
+    color: #2cb4db; }
+  section.mentoring .home-lead {
+    margin-top: 250px; }
+  section.mentoring .faces {
+    margin: -50px 0;
+    height: -webkit-calc(100% + 100px);
+    height: calc(100% + 100px);
+    padding: 0;
+    position: relative;
+    top: 800px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    section.mentoring .faces.launched {
+      top: 0px; }
+  section.mentoring .face {
+    list-style: none;
+    background-repeat: no-repeat; }
+  section.mentoring .face {
+    height: 80px;
+    width: 80px;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: center;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-bottom: 35px;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    cursor: pointer; }
+  section.mentoring .bubble {
+    opacity: 0;
+    position: absolute;
+    left: 100%;
+    bottom: 50%;
+    width: 300px;
+    margin-left: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px 15px 25px 30px;
+    -webkit-border-radius: 30px 30px 30px 10px;
+            border-radius: 30px 30px 30px 10px;
+    border: 3px solid white;
+    pointer-events: none;
+    -webkit-transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+    -o-transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+    transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left; }
+  section.mentoring .face.has-bubble-open .bubble {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
 
 .home-wrap {
   display: -webkit-box;

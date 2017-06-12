@@ -1,0 +1,37 @@
+section.about
+  background:
+    image: url(../img/about-cat.png)
+    position: left center
+    size: cover
+
+  h2
+    // color: #3f3f42
+    color: #f4f4f4
+    margin-left: -108px
+    margin-top: 0
+    font:
+      size: 60px
+      weight: 400
+    line-height: 1
+
+  .home-lead
+    padding-bottom: 180px
+
+//Typography
+.home-lead
+  color: #f4f4f4
+  font-size: 36px
+  line-height: 1.1
+
+  &.outdented
+    text-indent: -.75em
+
+    @media (max-width: 640px)
+      text-indent: 0
+
+@media (max-width: 640px)
+  section.about
+    h2, .home-lead
+      margin-left: auto
+      margin-right: auto
+      max-width: 300px

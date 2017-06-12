@@ -65,13 +65,15 @@ gulp.task('pug', function(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_pugfiles/*.pug', ['pug']);
     gulp.watch('assets/css/**', ['sass']);
+    gulp.watch('assets/js/**', ['jekyll-rebuild']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['assets/js/**'], ['jekyll-rebuild']);
+    gulp.watch('_pugfiles/*.pug', ['pug']);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['pug', 'browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch']);
