@@ -1,6 +1,7 @@
 section
   padding: 50px 0
 
+
 .flex
   display: flex
   flex-direction: row
@@ -14,6 +15,7 @@ section
   order: -1
 
 .col-1
+  width: 320px
   max-width: 320px
   margin: 0 10px
 
@@ -33,14 +35,29 @@ section
   .flex
     display: block
 
-    .col-1
-      max-width: 100%
+  .col-1
+    // max-width: 320px
+    margin: auto
 
-      h2
-        // margin-left: 0
-
-    .col-50
-      width: auto
+  .col-50
+    width: auto
 
   .push-right
-    margin-left: 10px
+    margin-left: 0
+
+
+//Typography
+.home-lead
+  color: #f4f4f4
+  font-size: 36px
+  line-height: 1.1
+
+  &.outdented
+    text-indent: -.75em
+
+@media (max-width: 640px)
+  .home-lead
+    text-align: center
+
+    &.outdented
+      text-indent: 0

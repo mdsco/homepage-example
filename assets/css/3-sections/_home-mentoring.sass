@@ -1,8 +1,4 @@
 section.mentoring
-
-  .col-1
-    width: 320px
-
   background:
     image: url(../img/mentoring-bg.jpg)
     size: cover
@@ -44,6 +40,10 @@ section.mentoring
     position: relative
     cursor: pointer
 
+    &.back-btn
+       background: white url(../img/back-icon.svg) center no-repeat
+       background-size: 15px 26px
+       display: none
 
   .bubble
     opacity: 0
@@ -65,3 +65,31 @@ section.mentoring
   .face.has-bubble-open .bubble
     opacity: 1
     transform: scale(1)
+
+@media (max-width: 640px)
+  section.mentoring
+    .home-lead
+      margin-top: 30px
+
+    .faces
+      margin-top: 240px
+      // top: 230px
+      width: 115px *7
+      left: 0px
+      top: 0px
+
+      &.launched
+        left: 0px
+
+    .face
+      display: inline-block
+      margin-right: 35px
+
+    .bubble
+      bottom: 100px
+      left: 10px
+      box-sizing: border-box
+      // border-radius: 30px 30px 10px 30px
+
+    .face.back-btn
+      display: inline-block
