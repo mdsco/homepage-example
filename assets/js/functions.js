@@ -1,6 +1,15 @@
 $(function(){
   mentoringBubbleClick();
+  setInterval(function(){
+    articleTada();
+  }, 1000)
 });
+
+function articleTada(){
+  var randNum = Math.floor(Math.random() * $('.article-thumb').length) + 1;
+  $('.article-thumb').eq(randNum).addClass('is-emph')
+    .siblings().removeClass('is-emph');
+}
 
 function mentoringBubbleClick(){
     $('.face').on('click', function(){
@@ -34,10 +43,23 @@ function mentoringBubbleClick(){
 $(window).scroll(function(){
   youtubeVidScroll();
   startMentoring();
+  startArticles();
 });
 
+function startArticles(){
+
+  if($('section.articles').offset().top - $(window).height()/2 < $(window).scrollTop()
+     && $(window).width() > 640){
+      $('.article-thumb').each(function(i){
+        setTimeout(function(){
+          $('.article-thumb').eq(i).addClass('is-visible');
+        }, 200 * i);
+      });
+  }
+}
+
 function startMentoring(){
-  if($('section.mentoring').offset().top < $(window).scrollTop() + 400
+  if($('section.mentoring').offset().top  < $(window).scrollTop()
      && $(window).width() > 640){
     $('.faces').addClass('launched');
   } else if($(window).width() <= 640) {
