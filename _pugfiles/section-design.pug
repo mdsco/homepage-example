@@ -1,0 +1,29 @@
+mixin image-box(link, image, color)
+  a(href="" + link target="_blank" data-color="" + color).design-img-link
+    img(src="/assets/img/design-img/" + image)
+
+section.design
+  .flex.flex--center
+    .col-50.flex.flex--center.dribbble(data-orig-color="#ea4c89")
+      .col-1
+        p.home-lead ...Updating Dribble...
+        +image-box('https://dribbble.com', 'drib-1.jpg', 'red')
+        +image-box('https://dribbble.com', 'drib-2.jpg', 'orange')
+        +image-box('https://dribbble.com', 'drib-3.png', 'yellow')
+        +image-box('https://dribbble.com', 'drib-4.jpg', 'green')
+        +image-box('https://dribbble.com', 'drib-5.jpg', 'blue')
+        +image-box('https://dribbble.com', 'drib-6.jpg', 'violet')
+        .cf
+        a(href="").home-cta See more on Dribble
+
+    .col-50.flex.flex--center.behance(data-orig-color="#1769ff")
+      .col-1
+        p.home-lead ...and Behance...
+        +image-box('https://www.behance.net','be-1.png', 'indigo')
+        +image-box('https://www.behance.net','be-2.jpg', 'honeydew')
+        +image-box('https://www.behance.net','be-3.jpg', 'brown')
+        +image-box('https://www.behance.net','be-4.jpg', 'lime')
+        +image-box('https://www.behance.net','be-5.jpg', 'beige')
+        +image-box('https://www.behance.net','be-6.png', 'lightblue')
+        .cf
+        a(href="#").home-cta See more on Behance
